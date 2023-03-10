@@ -1,0 +1,54 @@
+# 1. 打开一个新终端程序运行 roscore 命令
+roscore
+
+# 2. 再打开一个新终端程进入当前用户目录下
+cd ~/
+
+# 3. 创建 ROS 工作空间及工程源代码目录
+mkdir -p ./catkin_ws/src
+
+# 4. 进入 ROS 工作空间目录
+cd ~/catkin_ws
+
+# 5. 执行 catkin_make 命令，
+#    第一次执行时会在这个工作空间中创建 build 和 devel 两个目录
+#    并在 src 目录下生成一个 CMakeLists.txt 的软链接文件
+catkin_make
+
+# 6. 拷贝 mo_stereo_camera_driver_ros_v版本号.tar.gz 至 src 目录下
+cp ~/mo_stereo_camera_driver_ros_v版本号.tar.gz ./src/
+
+# 7. 解压 mo_stereo_camera_driver_ros_v版本号.tar.gz
+tar -zxvf ./src/mo_stereo_camera_driver_ros_v版本号.tar.gz ./src/
+
+注：
+如果有多个相机（如：笔记本电脑自带相机），
+请先用如下命令查询相应相机的地址 
+ls -Alt /dev/v4l/by-id/
+再修改 mo_stereo_camera_driver_ros_v版本号 目录下的
+1) launch 目录下的 moasic.launch    文件中 param name="cam_path" 对应的 value 值
+2) src    目录下的 usb_asic_cam.cpp 文件中的如下两处
+   nh.param<std::string>("cam_path",camPath,"/dev/v4l/by-id/相机名称及索引号");
+   s32Result = moOpenUVCCameraByPath("/dev/v4l/by-id/相机名称及索引号", &hCameraHandle);
+
+# 8. 删除无用的压缩包文件(后续如有需要请在其它路径备份此处不再赘述)
+rm -rf ./src/mo_stereo_camera_driver_ros_v版本号.tar.gz
+
+# 9. 设置环境变量
+source ./devel/setup.bash
+
+# A. 再次运行 catkin_make 命令进行编译
+catkin_make
+
+# B. 运行 mo_stereo_camera_driver 示例程序
+roslaunch moak_camera moasic.launch
+
+# C. 再打开一个新终端程序运行 rivz 命令以便显示RGBD和点云图像
+rviz
+
+注：
+运行 rviz 之后，在菜单中选择
+"file" -> "open config"
+选择 mo_stereo_camera_driver_ros_v版本号/rviz/mo.rviz 文件
+
+

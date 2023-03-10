@@ -1,0 +1,16 @@
+<launch>
+    <arg name="camera" default="camera_frame" />
+    <arg name="pi/2" value="1.5707963" />
+    <arg name="pi" value="3.1415926" />
+
+    <node pkg="moak_camera" type="usb_asic_cam" name="moak_camera"
+          respawn="false" output="screen">
+
+    </node>
+
+    <node pkg="tf" type="static_transform_publisher" name="camera_to_camera"
+          args="0 0 0 $(arg pi/2) 0  $(arg pi/2) /camera_link /$(arg camera) 100" />
+            <param name="cam_path" value="/dev/video0" />
+            <param name="fps" value="10" />
+            <param name="point_cloud_down_sample" value="8" />
+</launch>

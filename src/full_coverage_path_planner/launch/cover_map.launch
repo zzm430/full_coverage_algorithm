@@ -1,0 +1,21 @@
+<launch>
+    <arg name="map" default="map1_small"/>
+
+    <!--    Publish map-->
+    <node pkg="map_server" name="map_server" type="map_server"
+          args="$(find full_coverage_path_planner)/maps/$(arg map).yaml"
+          respawn="true" clear_params="true" output="screen"/>
+
+    <!--    Compute coverage path from map, divide path for each agent -->
+    <include file="$(find full_coverage_path_planner)/launch/path_planner.launch"/>
+
+    <!--    Waits for number of agents and waypoints for each agent, then launches the entire stack for each agent-->
+    <!-- 这个node里面启动了pid node -->
+    <node pkg="full_coverage_path_planner" type="multi_robot_bringup.py" name="multi_robot_bringup" clear_params="true"
+          required="true" output="screen">
+        <param name="robot_namespace" value="robot"/>
+    </node>
+
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find full_coverage_path_planner)/rviz/rviz.rviz"/>
+
+</launch>

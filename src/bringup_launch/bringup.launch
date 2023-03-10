@@ -1,0 +1,12 @@
+<launch>
+    <!-- start robot drive -->
+	<include file="$(find autolabor_robot)/launch/second_generation_basic_base.launch">
+		<arg name="robot_pub_tf" value="false"/>
+	</include>
+
+    <!-- coverage path planner -->
+    <include file="$(find full_coverage_path_planner)/launch/cover_map.launch">
+        <arg name="map" default="new_data"/>
+    </include>
+
+</launch>
