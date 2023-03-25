@@ -1,0 +1,148 @@
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/common.cpp:[m[K In function ‘[01m[Kbool a_star_to_open_space(const std::vector<std::vector<bool> >&, gridNode_t, int, std::vector<std::vector<bool> >&, const std::__cxx11::list<Point_t>&, std::__cxx11::list<gridNode_t>&)[m[K’:
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/common.cpp:177:96:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((uint)((cost + nn.std::vector<gridNode_t>::back().gridNode_t::cost) + distanceToClosestPoint(p2, (* & open_space)))) + i)[m[K’ from ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} to ‘[01m[Kint[m[K’ [[01;35m[K-Wnarrowing[m[K]
+  177 |                                 [01;35m[Kcost + nn.back().cost + distanceToClosestPoint(p2, open_space) + i[m[K,
+      |                                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/common.cpp:[m[K In function ‘[01m[Kstd::__cxx11::list<Point_t> map_2_goals(const std::vector<std::vector<bool> >&, bool)[m[K’:
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/common.cpp:328:30:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Kix[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kdouble[m[K’ [[01;35m[K-Wnarrowing[m[K]
+  328 |                 Point_t p = {[01;35m[Kix[m[K, iy};  // x, y
+      |                              [01;35m[K^~[m[K
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/common.cpp:328:34:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Kiy[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kdouble[m[K’ [[01;35m[K-Wnarrowing[m[K]
+  328 |                 Point_t p = {ix, [01;35m[Kiy[m[K};  // x, y
+      |                                  [01;35m[K^~[m[K
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/common.cpp:[m[K In function ‘[01m[Kvoid addNodeToList(int, int, std::__cxx11::list<gridNode_t>&, std::vector<std::vector<bool> >&)[m[K’:
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/common.cpp:357:26:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Kx2[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kdouble[m[K’ [[01;35m[K-Wnarrowing[m[K]
+  357 |     Point_t new_point = {[01;35m[Kx2[m[K, y2};
+      |                          [01;35m[K^~[m[K
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/common.cpp:357:30:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Ky2[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kdouble[m[K’ [[01;35m[K-Wnarrowing[m[K]
+  357 |     Point_t new_point = {x2, [01;35m[Ky2[m[K};
+      |                              [01;35m[K^~[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:40[m[K,
+                 from [01m[K/opt/ros/noetic/include/costmap_2d/footprint.h:41[m[K,
+                 from [01m[K/opt/ros/noetic/include/base_local_planner/world_model.h:42[m[K,
+                 from [01m[K/opt/ros/noetic/include/base_local_planner/costmap_model.h:40[m[K,
+                 from [01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/include/full_coverage_path_planner/full_coverage_path_planner.h:7[m[K,
+                 from [01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:4[m[K:
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:[m[K In member function ‘[01m[Kbool full_coverage_path_planner::FullCoveragePathPlanner::parseCostmap(costmap_2d::Costmap2D*, std::vector<std::vector<bool> >&, float, float, const PoseStamped&, Point_t&)[m[K’:
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:256:14:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%u[m[K’ expects argument of type ‘[01m[Kunsigned int[m[K’, but argument 8 has type ‘[01m[Kdouble[m[K’ [[01;35m[K-Wformat=[m[K]
+  256 |     ROS_INFO([01;35m[K"scaled start: (%u, %u)"[m[K, [32m[KscaledStart.x[m[K, scaledStart.y);
+      |              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~[m[K
+      |                                                    [32m[K|[m[K
+      |                                                    [32m[Kdouble[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:351:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+  351 |     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, [01;36m[K__VA_ARGS__[m[K)
+      |                                                                                                                                                                     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:390:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+  390 |       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:575:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+  575 | #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+      |                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+  110 | #define ROS_INFO(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+      |                       [01;36m[K^~~~~~~[m[K
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:256:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+  256 |     [01;36m[KROS_INFO[m[K("scaled start: (%u, %u)", scaledStart.x, scaledStart.y);
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:256:31:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  256 |     ROS_INFO("scaled start: ([01;36m[K%u[m[K, %u)", scaledStart.x, scaledStart.y);
+      |                              [01;36m[K~^[m[K
+      |                               [01;36m[K|[m[K
+      |                               [01;36m[Kunsigned int[m[K
+      |                              [32m[K%f[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:40[m[K,
+                 from [01m[K/opt/ros/noetic/include/costmap_2d/footprint.h:41[m[K,
+                 from [01m[K/opt/ros/noetic/include/base_local_planner/world_model.h:42[m[K,
+                 from [01m[K/opt/ros/noetic/include/base_local_planner/costmap_model.h:40[m[K,
+                 from [01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/include/full_coverage_path_planner/full_coverage_path_planner.h:7[m[K,
+                 from [01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:4[m[K:
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:256:14:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%u[m[K’ expects argument of type ‘[01m[Kunsigned int[m[K’, but argument 9 has type ‘[01m[Kdouble[m[K’ [[01;35m[K-Wformat=[m[K]
+  256 |     ROS_INFO([01;35m[K"scaled start: (%u, %u)"[m[K, scaledStart.x, [32m[KscaledStart.y[m[K);
+      |              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K                 [32m[K~~~~~~~~~~~~~[m[K
+      |                                                                   [32m[K|[m[K
+      |                                                                   [32m[Kdouble[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:351:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+  351 |     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, [01;36m[K__VA_ARGS__[m[K)
+      |                                                                                                                                                                     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:390:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+  390 |       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:575:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+  575 | #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+      |                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+  110 | #define ROS_INFO(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+      |                       [01;36m[K^~~~~~~[m[K
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:256:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+  256 |     [01;36m[KROS_INFO[m[K("scaled start: (%u, %u)", scaledStart.x, scaledStart.y);
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:256:35:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  256 |     ROS_INFO("scaled start: (%u, [01;36m[K%u[m[K)", scaledStart.x, scaledStart.y);
+      |                                  [01;36m[K~^[m[K
+      |                                   [01;36m[K|[m[K
+      |                                   [01;36m[Kunsigned int[m[K
+      |                                  [32m[K%f[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:40[m[K,
+                 from [01m[K/opt/ros/noetic/include/costmap_2d/footprint.h:41[m[K,
+                 from [01m[K/opt/ros/noetic/include/base_local_planner/world_model.h:42[m[K,
+                 from [01m[K/opt/ros/noetic/include/base_local_planner/costmap_model.h:40[m[K,
+                 from [01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/include/full_coverage_path_planner/full_coverage_path_planner.h:7[m[K,
+                 from [01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:4[m[K:
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:[m[K In member function ‘[01m[Kbool full_coverage_path_planner::FullCoveragePathPlanner::parseGrid(const OccupancyGrid&, std::vector<std::vector<bool> >&, float, float, const PoseStamped&, Point_t&)[m[K’:
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:321:14:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%u[m[K’ expects argument of type ‘[01m[Kunsigned int[m[K’, but argument 8 has type ‘[01m[Kdouble[m[K’ [[01;35m[K-Wformat=[m[K]
+  321 |     ROS_INFO([01;35m[K"scaled start: (%u, %u)"[m[K, [32m[KscaledStart.x[m[K, scaledStart.y);
+      |              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~[m[K
+      |                                                    [32m[K|[m[K
+      |                                                    [32m[Kdouble[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:351:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+  351 |     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, [01;36m[K__VA_ARGS__[m[K)
+      |                                                                                                                                                                     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:390:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+  390 |       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:575:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+  575 | #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+      |                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+  110 | #define ROS_INFO(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+      |                       [01;36m[K^~~~~~~[m[K
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:321:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+  321 |     [01;36m[KROS_INFO[m[K("scaled start: (%u, %u)", scaledStart.x, scaledStart.y);
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:321:31:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  321 |     ROS_INFO("scaled start: ([01;36m[K%u[m[K, %u)", scaledStart.x, scaledStart.y);
+      |                              [01;36m[K~^[m[K
+      |                               [01;36m[K|[m[K
+      |                               [01;36m[Kunsigned int[m[K
+      |                              [32m[K%f[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:40[m[K,
+                 from [01m[K/opt/ros/noetic/include/costmap_2d/footprint.h:41[m[K,
+                 from [01m[K/opt/ros/noetic/include/base_local_planner/world_model.h:42[m[K,
+                 from [01m[K/opt/ros/noetic/include/base_local_planner/costmap_model.h:40[m[K,
+                 from [01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/include/full_coverage_path_planner/full_coverage_path_planner.h:7[m[K,
+                 from [01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:4[m[K:
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:321:14:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%u[m[K’ expects argument of type ‘[01m[Kunsigned int[m[K’, but argument 9 has type ‘[01m[Kdouble[m[K’ [[01;35m[K-Wformat=[m[K]
+  321 |     ROS_INFO([01;35m[K"scaled start: (%u, %u)"[m[K, scaledStart.x, [32m[KscaledStart.y[m[K);
+      |              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K                 [32m[K~~~~~~~~~~~~~[m[K
+      |                                                                   [32m[K|[m[K
+      |                                                                   [32m[Kdouble[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:351:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+  351 |     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, [01;36m[K__VA_ARGS__[m[K)
+      |                                                                                                                                                                     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:390:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+  390 |       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:575:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+  575 | #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+      |                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+  110 | #define ROS_INFO(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+      |                       [01;36m[K^~~~~~~[m[K
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:321:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+  321 |     [01;36m[KROS_INFO[m[K("scaled start: (%u, %u)", scaledStart.x, scaledStart.y);
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/metoak/Desktop/multi_robot_coverage_planning/Multi-Robot-Coverage-Planning/src/server/full_coverage_path_planner/src/full_coverage_path_planner.cpp:321:35:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  321 |     ROS_INFO("scaled start: (%u, [01;36m[K%u[m[K)", scaledStart.x, scaledStart.y);
+      |                                  [01;36m[K~^[m[K
+      |                                   [01;36m[K|[m[K
+      |                                   [01;36m[Kunsigned int[m[K
+      |                                  [32m[K%f[m[K

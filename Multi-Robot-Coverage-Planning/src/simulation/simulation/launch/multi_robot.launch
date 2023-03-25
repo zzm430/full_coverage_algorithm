@@ -1,0 +1,27 @@
+<launch>
+    <arg name="map" default="map1_small"/>
+
+    <!--    Gazebo world-->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find simulation)/worlds/$(arg map).world"/>
+        <arg name="paused" value="true"/>
+        <arg name="use_sim_time" value="true"/>
+        <arg name="gui" value="false"/>
+        <arg name="headless" value="true"/>
+        <arg name="debug" value="false"/>
+        <arg name="verbose" value="true"/>
+    </include>
+
+    <group ns="gazebo">
+        <node pkg="simulation" type="gz_realtime_factor_node" name="gz_realtime_factor_node" output="screen"/>
+    </group>
+
+    <!--    Waits for number of agents and waypoints for each agent, then spawns each agent at start position of
+    assigned path
+    -->
+    <node pkg="simulation" type="multi_robot_spawner.py" name="multi_robot_spawner" clear_params="true" required="true"
+          output="screen">
+        <param name="robot_namespace" value="robot"/>
+    </node>
+
+</launch>
