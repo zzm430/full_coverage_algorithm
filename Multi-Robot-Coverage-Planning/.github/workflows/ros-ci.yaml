@@ -1,0 +1,34 @@
+name: ros-ci
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  industrial_ci:
+    strategy:
+      matrix:
+        env:
+          - ROS_DISTRO: noetic
+            ROS_REPO: main
+            CMAKE_ARGS: -Wall
+            CATKIN_LINT: true
+            BUILDER: catkin_make
+
+          - ROS_DISTRO: noetic
+            ROS_REPO: testing
+            CMAKE_ARGS: -Wall
+            CATKIN_LINT: true
+            BUILDER: catkin_make
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: 'ros-industrial/industrial_ci@master'
+        env: ${{matrix.env}}
